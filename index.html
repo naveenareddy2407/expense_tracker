@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="tracker">
+    <h1>?? Expense Tracker</h1>
+    <div class="summary">
+      <div class="summary-card balance">
+        <span>Balance</span><strong id="balance">$0.00</strong>
+      </div>
+      <div class="summary-card income">
+        <span>Income</span><strong id="income">$0.00</strong>
+      </div>
+      <div class="summary-card expense">
+        <span>Expenses</span><strong id="expenses">$0.00</strong>
+      </div>
+    </div>
+    <form id="transForm">
+      <input type="text" id="desc" placeholder="Description (e.g. Coffee)" required>
+      <div class="form-row">
+        <input type="number" id="amount" placeholder="Amount" step="0.01" min="0.01" required>
+        <select id="type">
+          <option value="expense">Expense</option>
+          <option value="income">Income</option>
+        </select>
+      </div>
+      <button type="submit">Add Transaction</button>
+    </form>
+    <h3>Transaction History</h3>
+    <ul id="transactionList"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
